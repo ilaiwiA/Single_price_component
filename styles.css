@@ -1,0 +1,117 @@
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  /* ### Primary */
+  --cyan: hsl(179, 62%, 43%);
+  --bright--yellow: hsl(71, 73%, 54%);
+  --cyan__light: hsla(179, 62%, 43%, 0.661);
+
+  /* ### Neutral */
+  --light__gray: hsl(204, 43%, 93%);
+  --grayish__blue: hsl(218, 22%, 67%);
+
+  /* font family */
+  --ff-body: "Karla", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 16px;
+  background-color: var(--light__gray);
+  font-family: var(--ff-body);
+}
+
+.container {
+  padding: 1em;
+  margin: 1em;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em;
+}
+
+.main_panel {
+  flex: 1;
+  border-radius: 0.5em 0.5em 0 0;
+  background-color: white;
+}
+
+.main_panel h3 {
+  color: var(--cyan);
+}
+
+.main_panel #sub_title {
+  font-weight: 700;
+  color: var(--bright--yellow);
+}
+
+.main_panel p {
+  line-height: 1.75em;
+  color: var(--grayish__blue);
+}
+
+.detail_panel_container {
+  overflow: hidden;
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+.price_panel {
+  color: white;
+  background-color: var(--cyan);
+}
+
+.price_panel #price {
+  display: flex;
+  gap: 0.5em;
+  font-size: 28px;
+}
+
+.price_panel span {
+  font-size: 0.5em;
+  align-self: center;
+  color: var(--light__gray);
+}
+
+.price_panel button {
+  padding: 1em;
+  border-radius: 0.35em;
+  color: white;
+  background-color: var(--bright--yellow);
+}
+
+.detail_panel {
+  color: white;
+  background-color: var(--cyan__light);
+}
+.detail_panel ul {
+  line-height: 1.5em;
+  font-size: 0.9em;
+  color: var(--light__gray);
+  list-style: none;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    max-width: 700px;
+  }
+  .detail_panel_container {
+    display: flex;
+  }
+  .price_panel {
+    flex: 1;
+  }
+  .detail_panel {
+    flex: 1;
+  }
+}
